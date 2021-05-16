@@ -1,0 +1,9 @@
+{
+"pdfsize":
+{
+  "inputs":
+  [
+    {"name":"filename", "kind":"required", "type":[["filepath=*.pdf"], ["folderpath"], "char"], "multiplicity":"append"}
+  ]
+}
+}
