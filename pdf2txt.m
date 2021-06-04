@@ -88,7 +88,7 @@ case 1
             if datetime(s2.date) > datetime(s1.date)
                 fprintf('Skip.\n');
             else
-                mlx2m(T.src(n), T.dst(n));
+                pdf2txt(T.src(n), T.dst(n));
                 fprintf('Done.\n');
             end
         else
