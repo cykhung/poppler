@@ -85,7 +85,7 @@ case 1
         if exist(char(T.dst(n)), 'file') ~= 0
             s1 = dir(char(T.src(n)));
             s2 = dir(char(T.dst(n)));
-            if datetime(s2.date) > datetime(s1.date)
+            if s2.datenum > s1.datenum
                 fprintf('Skip.\n');
             else
                 pdf2txt(T.src(n), T.dst(n));
@@ -105,7 +105,7 @@ case 2
     
     % Check pdffilenames and txtfilenames.
     if any(size(pdffilenames) ~= size(txtfilenames))
-        error('Mismatch in sizes of mlxfilenames and mfilenames');
+        error('Mismatch in sizes of pdffilenames and txtfilenames');
     end
     
     % Convert PDF files to TXT files.
