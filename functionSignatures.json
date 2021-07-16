@@ -10,7 +10,7 @@
 {
   "inputs":
   [
-    {"name":"filename", "kind":"required", "type":[["filepath=*.pdf"], ["folderpath"], "char"], "multiplicity":"append"}
+    {"name":"filename", "kind":"required", "type":[["filepath=*.pdf,*.txt"], ["folderpath"], "char"], "multiplicity":"append"}
   ]
 }
 }
