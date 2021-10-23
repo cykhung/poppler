@@ -23,7 +23,8 @@ filenames = convert_filenames(filenames);
 
 
 %% Process one PDF at a time.
-popplerexe = fullfile(fileparts(mfilename('fullpath')), 'bin', 'pdfinfo.exe');
+popplerexe = fullfile(fileparts(mfilename('fullpath')), 'private', ...
+    'poppler-0.51.0', 'bin', 'pdfinfo.exe');
 T          = table;
 for n = 1:numel(filenames)
     

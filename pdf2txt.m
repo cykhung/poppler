@@ -89,11 +89,13 @@ case 1
                 fprintf('Skip.\n');
             else
                 pdf2txt(T.src(n), T.dst(n));
-                fprintf('Done.\n');
+                % fprintf('Done.\n');
+                cprintf('red', 'Done.\n');
             end
         else
             pdf2txt(T.src(n), T.dst(n));
-            fprintf('Done.\n');
+            % fprintf('Done.\n');
+            cprintf('red', 'Done.\n')
         end
     end    
     
@@ -126,7 +128,8 @@ function convertfile(pdffilename, txtfilename)
 
 
 %% Call pdftotext.exe.
-exe = fullfile(fileparts(mfilename('fullpath')), 'bin', 'pdftotext.exe');
+exe = fullfile(fileparts(mfilename('fullpath')), 'private', ...
+    'poppler-0.51.0', 'bin', 'pdftotext.exe');
 cmd = sprintf('%s -layout "%s" "%s"', exe, pdffilename, txtfilename);
 dos(cmd);
 
