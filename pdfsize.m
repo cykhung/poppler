@@ -29,7 +29,7 @@ T          = table;
 for n = 1:numel(filenames)
     
     % Get number of pages in the PDF file.
-    [~, docinfo] = dos(sprintf('%s "%s"', popplerexe, filenames{n}));
+    [~, docinfo] = dos(sprintf('"%s" "%s"', popplerexe, filenames{n}));
     infostr      = strsplit(docinfo, '\n');
     pageidx      = ~cellfun(@isempty,regexp(infostr, '^Pages:'));
     tmp          = strsplit(infostr{pageidx});
@@ -42,7 +42,7 @@ for n = 1:numel(filenames)
     end
     
     % Get the page size of each page.
-    cmd           = sprintf('%s -f 1 -l %d "%s"',   ...
+    cmd           = sprintf('"%s" -f 1 -l %d "%s"', ...
                             popplerexe,             ...
                             numpages,               ...
                             filenames{n});
