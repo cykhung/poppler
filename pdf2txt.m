@@ -130,7 +130,7 @@ function convertfile(pdffilename, txtfilename)
 %% Call pdftotext.exe.
 exe = fullfile(fileparts(mfilename('fullpath')), 'private', ...
     'poppler-0.51.0', 'bin', 'pdftotext.exe');
-cmd = sprintf('%s -layout "%s" "%s"', exe, pdffilename, txtfilename);
+cmd = sprintf('"%s" -layout "%s" "%s"', exe, pdffilename, txtfilename);
 dos(cmd);
 
 
