@@ -6,6 +6,13 @@
     {"name":"filename", "kind":"required", "type":[["filepath=*.pdf"], ["folderpath"], "char"], "multiplicity":"append"}
   ]
 },
+"extractpdf":
+{
+  "inputs":
+  [
+    {"name":"filename", "kind":"required", "type":[["filepath=*.pdf"], ["folderpath"], "char"], "multiplicity":"append"}
+  ]
+},
 "pdf2txt":
 {
   "inputs":
